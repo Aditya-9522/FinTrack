@@ -21,6 +21,10 @@ app.use("/api/transactions", transactionRoutes);
 app.use("/api/budgets", budgetRoutes);
 app.use("/api/income", incomeRoutes);
 app.use("/api/ai", aiRoutes);
+app.use(cors({
+  origin:"https://fin-track-qmgj-nwjwd2gss-aditya-9522s-projects.vercel.app/",
+  credentials:true
+}))
 
 // test route
 app.get("/", (req, res) => {
